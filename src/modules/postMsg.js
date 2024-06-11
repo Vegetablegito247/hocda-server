@@ -2,11 +2,9 @@ const Client = require("../models/client");
 
 const postMsg = async (req, res) => {
     try {
-        const { firstName, lastName, email, message } = req.body;
+        const { email, message } = req.body;
 
         const newMsg = new Client({
-            firstName: firstName,
-            lastName: lastName,
             email: email,
             message: message
         });
